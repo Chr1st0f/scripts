@@ -20,9 +20,9 @@ Unregister will launch
 
 Register
 ------------------------
-launch4wget $server " wget -t 1 --timeout=3 http://satellite-ebu.ebu.ch/pub/katello-ca-consumer-latest.noarch.rpm"
-launch $server "rpm -Uvh http://satellite-ebu.ebu.ch/pub/katello-ca-consumer-latest.noarch.rpm"
-\# Check if activation key exist
-launch $server "subscription-manager register --org="EBU" --activationkey=\"$ak\""
-launch $server "subscription-manager repos --enable=rhel-7-server-satellite-tools-6.6-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-supplementary-rpms"
-launch $server "yum install -y katello-agent"*
+	launch4wget $server " wget -t 1 --timeout=3 http://satellite-ebu.ebu.ch/pub/katello-ca-consumer-latest.noarch.rpm"
+	launch $server "rpm -Uvh http://satellite-ebu.ebu.ch/pub/katello-ca-consumer-latest.noarch.rpm"
+	\# Check if activation key exist
+	launch $server "subscription-manager register --org="EBU" --activationkey=\"$ak\""
+	launch $server "subscription-manager repos --enable=rhel-7-server-satellite-tools-6.6-rpms --enable=rhel-7-server-extras-rpms --enable=rhel-7-server-supplementary-rpms"
+	launch $server "yum install -y katello-agent"*
