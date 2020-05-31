@@ -10,7 +10,7 @@ As is just command launched remotely by SSH you can do it or adapt for another v
 
 Unregister will launch
 ------------------------
-launch $server "yum remove -y katello-ca-consumer\*"
+	launch $server "yum remove -y katello-ca-consumer\*"
 launch $server "subscription-manager remove -–all"
 launch $server "subscription-manager clean"
 launch $server "yum remove -y gofer"
